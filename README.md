@@ -11,6 +11,6 @@ This repository serves as a personal knowledge base and contains research notes 
 
 ## Backend "Safari"
 
-* [REST API](./backend-safari/rest-api.md) <Researching...>
+* [REST API](./backend-safari/rest-api.md) (Monday 10:21PM, January 05, 2026)
 
 ## Android
