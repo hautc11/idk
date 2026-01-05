@@ -6,7 +6,7 @@ This repository serves as a personal knowledge base and contains research notes 
 ---
 ## How to use
 
-1.  **Search:** Press t on your keyboard to activate the file finder.
+1.  **Search:** Press <kbd>t</kbd> on your keyboard to activate the file finder.
 2.  **Navigation:** All files are organized by topic in the folders below.
 
 ## Backend "Safari"
