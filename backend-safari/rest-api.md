@@ -20,10 +20,10 @@ If we break these rules, our API might still work but it cannot be considered tr
 
 ## PUT vs. PATCH
 - **PUT (Replace)**
-    - Scenario: "This is the new version of Order#1. Overwrite the old one completely"
+    - Scenario: "This is the new version of Order#1. Overwrite the old one completely".
     - FE will send the entire object. If a field is missing in the request, BE should techincally set that field to null or default value.
 - **PATCH (Modify)**
-    - Scenario: "Order#1 just change the quantity of Cheese. Just keep the other product.
+    - Scenario: "Order#1 just change the quantity of Cheese. Just keep the other information."
     - FE send only the data that changed.
 
 **Why it matters?**
