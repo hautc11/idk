@@ -4,6 +4,10 @@
 
 **REST** stands for **RE**presentational **S**tate **T**ransfer.
 
+> 1. Names (resources) for things: unique url for each thing.
+> 2. Action words for task: GET, POST, PUT, DELETE.
+> 3. Stateless: short memory - prove who you are everytime interact with it (token).
+
 It's not a library or a [protocol](). It is an Architectural Style that treat server data as "Resources" and use standard [HTTP Method](#the-http-methods) to interact with them. It is a set of rules that, if followed, will make our API scalable an reliable.
 
 If we break these rules, our API might still work but it cannot be considered truly "RESTful".
