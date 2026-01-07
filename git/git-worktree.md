@@ -29,6 +29,8 @@ git worktree add ../path-to-dir -b branch-name
 ```
 ![create-worktree](../images/create-worktree.png)
 
+⁕ After we created a worktree, just use Android Studio to open that folder in seperate window and let the shameless copy-pasting begin!.
+
 **List all worktrees**
 
 To see all active worktrees and their locations:
@@ -50,4 +52,5 @@ git worktree remove <path-to-dir>
 To clean up metadata if a worktree directory was deleted manually:
 ```sh
 git worktree prune
+
 ```
