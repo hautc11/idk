@@ -15,3 +15,7 @@ This repository serves as a personal knowledge base and contains research notes 
 * [Status Code](./backend-safari/status-code.md) (Tuesday 9:23PM, January 06, 2026)
 
 ## Android
+
+
+## Git
+* [git worktree](./git/git-worktree.md)
