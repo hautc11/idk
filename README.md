@@ -9,6 +9,10 @@ This repository serves as a personal knowledge base and contains research notes 
 1.  **Search:** Press <kbd>t</kbd> on your keyboard to activate the file finder.
 2.  **Navigation:** All files are organized by topic in the folders below.
 
+## Networking Essentials
+
+* [OSI Model](./network/osi-model.md) (In-progress)
+
 ## Backend "Safari"
 
 * [REST API](./backend-safari/rest-api.md) (Monday 10:21PM, January 05, 2026)
@@ -18,4 +22,4 @@ This repository serves as a personal knowledge base and contains research notes 
 
 
 ## Git
-* [git worktree](./git/git-worktree.md)
+* [git worktree](./git/git-worktree.md) 
