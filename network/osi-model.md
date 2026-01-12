@@ -1,5 +1,8 @@
 # OSI Model - Open System Interconnection Model
 
+> It is the blueprint for understanding how networks should work.
+
+
 ```
                      +-------------------------+                                           
                      |                         |                                           
@@ -69,6 +72,10 @@ It is the only layer that interacts directly with your software (like a web brow
 
 ### HTTP protocol
 
+* HTTP is the Tool (The "Hammer"): It is a Protocol. It defines how data gets from Point A to Point B. It provides the mechanism (verbs like GET/POST, headers, status codes).
+
+* REST is the Rulebook (The "Blueprint"): It is an Architectural Style. It defines how you should use the tool (HTTP) to organize your data so that it is scalable and easy to understand.
+
 * The way HTTP work is simple text formatted request and responses.
 
     ```
@@ -91,3 +98,5 @@ It is the only layer that interacts directly with your software (like a web brow
         ]
     }
     ```
+
+### Websocket, gRPC, WebRTC...

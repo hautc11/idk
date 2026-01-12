@@ -11,7 +11,7 @@ This repository serves as a personal knowledge base and contains research notes 
 
 ## Networking Essentials
 
-* [OSI Model](./network/osi-model.md) (In-progress)
+* [OSI Model](./network/osi-model.md) (Monday 10:28PM, January 12, 2026)
 
 ## Backend "Safari"
 
