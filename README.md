@@ -20,6 +20,7 @@ This repository serves as a personal knowledge base and contains research notes 
 
 ## Android
 
+* [Build Variants](./android/buid-variants.md) (Thursday 10:00PM, January 08, 2026)
 
 ## Git
 * [git worktree](./git/git-worktree.md) 
