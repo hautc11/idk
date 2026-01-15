@@ -3,7 +3,7 @@ As an Android Developer, I often faced this scenario:
 I'm working on `feature/add-chip-view-for-records-list-scr` but need to quickly reference the code in another branch. 
 Usually, I would use `git checkout` to handle this. However, it sometime disrupts my workflow, especially if I have uncommitted changes or long Gradle sync times.
 
-→ That is where `git worktree` come to help. It allowing a secondary branch to be open in a seperate window without disturbing the current environment.
+→ That is where `git worktree` come to help. It allowing a secondary branch to be open in a separate window without disturbing the current environment.
 
 Like this:
 
@@ -13,7 +13,7 @@ Like this:
 
 1. Duplicate disk space.
 2. Sync issues.
-3. Manageing mutiple clones complicates.
+3. Managing multiple clones complicates.
 
 ## Essential Commands
 
@@ -29,7 +29,7 @@ git worktree add ../path-to-dir -b branch-name
 ```
 ![create-worktree](../images/create-worktree.png)
 
-⁕ After we created a worktree, just use Android Studio to open that folder in seperate window and let the shameless copy-pasting begin!.
+⁕ After we created a worktree, just use Android Studio to open that folder in separate window and let the shameless copy-pasting begin!.
 
 **List all worktrees**
 

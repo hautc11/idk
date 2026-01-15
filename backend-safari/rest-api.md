@@ -6,9 +6,9 @@
 
 > 1. Names (resources) for things: unique url for each thing.
 > 2. Action words for task: GET, POST, PUT, DELETE.
-> 3. Stateless: short memory - prove who you are everytime interact with it (token).
+> 3. Stateless: short memory - prove who you are every time interact with it (token).
 
-It's not a library or a [protocol](). It is an Architectural Style that treat server data as "Resources" and use standard [HTTP Method](#the-http-methods) to interact with them. It is a set of rules that, if followed, will make our API scalable an reliable.
+It's not a library or a [protocol](). It is an Architectural Style that treat server data as "Resources" and use standard [HTTP Method](#the-http-methods) to interact with them. It is a set of rules that, if followed, will make our API scalable a reliable.
 
 If we break these rules, our API might still work but it cannot be considered truly "RESTful".
 
@@ -25,7 +25,7 @@ If we break these rules, our API might still work but it cannot be considered tr
 ## PUT vs. PATCH
 - **PUT (Replace)**
     - Scenario: "This is the new version of Order#1. Overwrite the old one completely".
-    - FE will send the entire object. If a field is missing in the request, BE should techincally set that field to null or default value.
+    - FE will send the entire object. If a field is missing in the request, BE should technically set that field to null or default value.
 - **PATCH (Modify)**
     - Scenario: "Order#1 just change the quantity of Cheese. Just keep the other information."
     - FE send only the data that changed.

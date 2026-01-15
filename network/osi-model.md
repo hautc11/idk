@@ -37,7 +37,7 @@
 
 ## Network Layer (3)
 
-This is where protocals like IP, and others handle routing, addressing, and packet forwarding.
+This is where protocols like IP, and others handle routing, addressing, and packet forwarding.
 
 ### IP (Internet Protocol)
 
@@ -57,7 +57,7 @@ This is where TCP and UDP provide some additional functionality on top of IP lik
 
 ### TCP (Transmission Control Protocol)
 
-* Give you some additonal features on top of IP like guaranteed delivery and ordering.
+* Give you some additional features on top of IP like guaranteed delivery and ordering.
 * Reliable, default, guarantees ordering >< throughput, latency.
 
 ### UDP (User Datagram Protocol)

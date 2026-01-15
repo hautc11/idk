@@ -1,7 +1,7 @@
 # I Don't Know
 > I didn't know this... so I wrote it down.
 
-This repository serves as a personal knowledge base and contains research notes from my self-study.
+This repository serves as a personal knowledge base and contains research notes from myself-study.
 
 ---
 ## How to use
