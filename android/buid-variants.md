@@ -1,11 +1,18 @@
 # Build Variants
 
-As an Android Developer you may need separate environments:
+## Build Types vs. Build Flavors
 
-* `debug (Dev)`/`staging (QA)`: For testing features without affecting real user data.
-* `release (Production)`: For publishing to the Play Store.
+<b>Build Type:</b> Usually refer to the environment in which you're testing. By default, when you create an app in Android Studio, you get two build types: `debug` and `release`. But you may know there are usually more than these two.
 
-That's when you need to config some build variants for your project.
+<b>Flavor:</b> Apps often vary in ways besides environment-based differents.
+Flavor support these kinds of variations. For example, you can use flavors to handle:
+* Having a paid version of your app vs. a free version.
+
+* Having a version for each store you upload to, such as Amazon Appstore, Google Play Store, Samsung Galaxy Store.
+
+* Using the same app for different products and customizing the assets to change the app's look.
+
+<b>Buid variants:</b> are the combination of build types and build flavors. For example, you can have a "dev paid" version of your app, which is a combination of the "dev" build type and "paid" flavor of your app. If you have both flavors and types, you'll release variants when uploading to the Google Play Store or any other store.
 
 `build.gralde.kts` (:module level)
 
@@ -87,11 +94,3 @@ android {
             "debugImplementation"("com.squareup.leakcanary:leakcanary-android:2.12")
         }
     ```
-
-## Build Variants vs. Build Types
-
-<b>Build Type:</b> Manages Technical aspects (Minify, Debug) + Environment (Server URL, API Key).
-
-<b>Flavor:</b> Manages Business aspects (Features, Limits, Content, Branding).
-
-<b>Both:</b> Use `buildConfigField`, `manifestPlaceholders`, and `applicationIdSuffix` to serve their own respective purposes.
