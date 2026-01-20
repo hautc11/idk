@@ -70,7 +70,7 @@ This is where TCP and UDP provide some additional functionality on top of IP lik
 
 It is the only layer that interacts directly with your software (like a web browser or email client).
 
-### HTTP protocol
+### HTTP Protocol
 
 * HTTP is the Tool (The "Hammer"): It is a Protocol. It defines how data gets from Point A to Point B. It provides the mechanism (verbs like GET/POST, headers, status codes).
 
@@ -99,4 +99,4 @@ It is the only layer that interacts directly with your software (like a web brow
     }
     ```
 
-### Websocket, gRPC, WebRTC...
+### WebSocket, gRPC, WebRTC...
