@@ -23,7 +23,7 @@
 
 ## Vertical Scaling
 
-- Where we're going to duplicate our server and find someway of [balancing](#load-balancing) our request and our data between them.
+- Where we're going to duplicate our server and find someway of [balancing](/network/load-balancing.md) our request and our data between them.
 
 ```
                            +-----------+                 

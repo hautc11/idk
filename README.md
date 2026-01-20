@@ -12,6 +12,8 @@ This repository serves as a personal knowledge base and contains research notes 
 ## Networking Essentials
 
 * [OSI Model](./network/osi-model.md) (Monday 10:28PM, January 12, 2026)
+* [Horizontal and Vertical Scale](./network/horizontal-and-vertical-scale.md) (Monday 10:28PM, January 12, 2026)
+* [Load Balancing](./network/load-balancing.md) - `In-progress`
 
 ## Backend "Safari"
 
@@ -26,4 +28,4 @@ This repository serves as a personal knowledge base and contains research notes 
 
 
 ## Git
-* [git worktree](./git/git-worktree.md) 
+* [git worktree](./git/git-worktree.md) (Wensday 09:20PM, January 07, 2026)
