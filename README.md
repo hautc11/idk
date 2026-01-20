@@ -4,7 +4,7 @@
 This repository serves as a personal knowledge base and contains research notes from myself-study.
 
 ---
-## How to use
+## How to Use
 
 1.  **Search:** Press <kbd>t</kbd> on your keyboard to activate the file finder.
 2.  **Navigation:** All files are organized by topic in the folders below.
@@ -21,6 +21,9 @@ This repository serves as a personal knowledge base and contains research notes 
 ## Android
 
 * [Build Variants](./android/buid-variants.md) (Thursday 10:00PM, January 08, 2026)
+
+* [Inline Content in Text (Jetpack Compose Android)](./android/inline-content.md) (Thursday 10:00PM, January 08, 2026)
+
 
 ## Git
 * [git worktree](./git/git-worktree.md) 
