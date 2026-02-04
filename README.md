@@ -30,6 +30,8 @@ This repository serves as a personal knowledge base and contains research notes 
 
 ## Git
 * [git worktree](./git/git-worktree.md) (Wednesday 09:20PM, January 07, 2026)
+* [git rebase interactive](./git/git-rebase-interactive.md) (Wednesday 07:53PM, Feb 04, 2026)
+
 
 ## Flutter
 
