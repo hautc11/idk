@@ -24,9 +24,6 @@ When you run `git rebase -i`, Git opens an editor with a list of commits you're 
 ```bash
 # Start interactive rebase for the last N commits
 git rebase -i HEAD~N
-
-# Or rebase onto a specific branch
-git rebase -i <branch-name>
 ```
 
 ## Common Use Cases
@@ -40,7 +37,6 @@ git rebase -i HEAD~3
 or
 
 git rebase -i <commit-hash>
-# Change second and third "pick" to "squash"
 ```
 
 ### 2. Reordering Commits
