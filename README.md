@@ -20,6 +20,7 @@ This repository serves as a personal knowledge base and contains research notes 
 
 * [REST API](./backend-safari/rest-api.md) (Monday 10:21PM, January 05, 2026)
 * [Status Code](./backend-safari/status-code.md) (Tuesday 9:23PM, January 06, 2026)
+* [Execution Plans](./backend-safari/execution-plans.md) (Tuesday 8:35PM, August 19, 2026)
 
 ## Android
 

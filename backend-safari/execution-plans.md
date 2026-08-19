@@ -11,7 +11,7 @@
 
 - *one Logical Operation can be implemented by different Physical Operations*, depending on which one the optimizer estimates to be cheapest (based on statistics, data size, available indexes, etc.).
 
-## 3. Lesson learned áp dụng lại được
+## 3. Lesson learned
 
 - When reading an execution plan, always **compare Estimated vs. Actual**. If the estimated row counts differ significantly from actual counts, that's a signal to check statistics or indexes first - don't rush to optimize the query before investigating this root cause.
 Seeing a **Table Scan** or **Clustered Index Scan** on a large table in an execution plan is a warning sign that an appropriate index may be missing for the WHERE/JOIN conditions.
