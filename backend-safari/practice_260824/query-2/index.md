@@ -58,7 +58,7 @@ Parallel Seq Scan on orders o  (cost=0.00..13812.33 rows=9 width=16) (actual tim
 ->  Parallel Hash Join  (cost=13812.45..54593.71 rows=26 width=34) (actual time=36.679..135.316 rows=21 loops=3)
               Hash Cond: (oi.order_id = o.id)
 ```
-Sau khi có 1 triệu dòng từ `order_items`, so khớp từng dòng với hash table - dù hash table nhỏ (chỉ 7 dòng), vẫn cần lặp qua 1 triệu dòng (thời gian tiêu tốn: 44).
+Sau khi có 1 triệu dòng từ `order_items`, so khớp từng dòng với hash table - dù hash table nhỏ (chỉ 7 dòng), vẫn cần lặp qua 1 triệu dòng.
 
 `->  Nested Loop  (cost=13812.73..54601.51 rows=26 width=38) (actual time=36.706..135.461 rows=21 loops=3)`
 
@@ -72,7 +72,7 @@ Với mỗi dòng đã join được, thực hiện tiếp bước tra `products
 
 ## Optimization Proposal
 
-Có 2 điểm nghẽn chính đó là 2 lần Seq Scan:
+Có 2 điểm có thể improve đó là 2 lần Seq Scan:
 1. Quét toàn bộ `orders` (1 triệu dòng) chỉ để tìm 7 dòng của 1 khách hàng.
 2. Quét toàn bộ `order_items` (3 triệu dòng) chỉ để tìm ~63 dòng khớp với 7 order đó.
 
