@@ -51,7 +51,7 @@ Execution Time: 166.000 ms
         Sort Key: (date_trunc('month'::text, created_at))
         Sort Method: external merge  Disk: 6112kB
 ```
--> Vì index ở bước 1 chỉ theo `created_at` -> sắp xếp lại từ đầu. Khi sắp xếp thì Postgres sẽ chạy quick sort (với dữ liệu được nạp toàn bộ vào RAM) nếu dữ liệu vừa với `work_mem` (`SHOW work_mem;`) -> sau đó trả kết quả. Còn nếu không vừa thì chia nhỏ dữ liệu thành các phần bằng với `work_mem` -> sắp xếp từng batch -> đọc file đã sắp xếp -> merge lại -> thành kết quả hoàn chỉnh -> ở đây ghi dữ liệu (write I/O) sau đó đọc lại sẽ chậm hơn nhiều.
+-> Vì index ở bước 1 chỉ theo cột `created_at` -> vẫn cần sắp xếp lại từ đầu. Khi sắp xếp thì Postgres sẽ chạy quick sort (với dữ liệu được nạp toàn bộ vào RAM) nếu dữ liệu có dung lượng vừa với `work_mem` (`SHOW work_mem;`) -> sau đó trả kết quả. Còn nếu không vừa thì chia nhỏ dữ liệu thành các phần bằng với `work_mem` -> sắp xếp từng batch -> đọc file đã sắp xếp -> merge lại -> thành kết quả hoàn chỉnh -> ở đây ghi dữ liệu (write I/O) sau đó đọc lại sẽ chậm hơn nhiều.
 
 ```
 GroupAggregate  (cost=46549.34..52200.77 rows=251175 width=40) (actual time=137.355..163.508 rows=25 loops=1)
@@ -68,4 +68,4 @@ GroupAggregate  (cost=46549.34..52200.77 rows=251175 width=40) (actual time=137.
 
 ![after-opt](after-opt.png)
 
-Phần sort giảm từ 142ms xuống còn 132ms.
+Phần sort giảm từ 166ms xuống còn khoảng 147ms.
