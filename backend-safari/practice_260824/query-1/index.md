@@ -70,4 +70,4 @@ ON orders (status, created_at DESC);
 
 ![after-opt](after-opt.png)
 
-Thời gian thực thi giảm từ 125.291ms xuống 0.146ms. Thay vì dùng Parallel Seq Scan (toàn bảng) thì chuyển sang dùng Index Scan (trực tiếp). Không cần dùng đến SORT nữa (theo index đã có sẵn).
+Thời gian thực thi giảm từ 125.291ms xuống 0.268ms. Thay vì dùng Parallel Seq Scan (toàn bảng) thì chuyển sang dùng Index Scan (trực tiếp). Không cần dùng đến SORT nữa (theo index đã có sẵn).
