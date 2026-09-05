@@ -61,11 +61,81 @@ GroupAggregate  (cost=46549.34..52200.77 rows=251175 width=40) (actual time=137.
 
 ## Optimization Proposal
 
+### Proposal 1
+
 - Đã thử cách thêm index cho phần `date_trunc('month', created_at)` nhưng `date_trunc` phụ thuộc vào time_zone - có thể thay đổi tuỳ theo cấu hình session = MUTABLE nên không đánh index được.
 - Tăng `work_mem` để giảm thời gian đọc/ghi: `SET work_mem = '64MB';`
 
+### Proposal 2
+
+- Chia dữ liệu thành từng khoảng tháng bằng `generate_series()` thay vì áp dụng `date_trunc()` trên toàn bộ records rồi sort trước khi `GROUP BY`.
+- Thực hiện `SUM(total)` trực tiếp trong từng monthly range bằng `LATERAL`, giúp giảm số lượng records cần truyền lên các node phía trên.
+- Tạo partial covering index chỉ chứa các order có `status = 'paid'`, đồng thời include `total` để PostgreSQL có thể sử dụng `Index Only Scan`.
+
+```sql
+// Index
+
+CREATE INDEX idx_orders_paid_created_at_covering
+ON orders (created_at)
+INCLUDE (total)
+WHERE status = 'paid';
+
+EXPLAIN (ANALYZE, BUFFERS)
+WITH bounds AS (
+    SELECT date_trunc('month', MAX(created_at)) AS last_month
+    FROM orders
+    WHERE created_at >= TIMESTAMPTZ '2024-01-01 00:00:00+07'
+      AND status = 'paid'
+),
+months AS (
+    SELECT generate_series(
+        TIMESTAMPTZ '2024-01-01 00:00:00+07',
+        last_month,
+        INTERVAL '1 month'
+    ) AS month
+    FROM bounds
+)
+SELECT
+    m.month,
+    r.revenue
+FROM months m
+CROSS JOIN LATERAL (
+    SELECT SUM(o.total) AS revenue
+    FROM orders o
+    WHERE o.status = 'paid'
+      AND o.created_at >= m.month
+      AND o.created_at < m.month + INTERVAL '1 month'
+) r
+WHERE r.revenue IS NOT NULL
+ORDER BY m.month;
+```
+
 ## Result
+
+### Proposal 1
 
 ![after-opt](after-opt.png)
 
 Phần sort giảm từ 166ms xuống còn khoảng 147ms.
+
+
+### Proposal 2
+
+![after-optz-2](after-optz-2.png)
+
+- Không còn global sort trên toàn bộ các order thỏa điều kiện.
+- Mỗi monthly range được aggregate trực tiếp.
+- `total` được đọc trực tiếp từ index.
+- Partial index chỉ chứa các record có `status = 'paid'`, giúp giảm kích thước index.
+
+Execution time cuối cùng giảm từ:
+
+```text
+166 ms
+```
+
+xuống còn:
+
+```text
+63 ms
+```
