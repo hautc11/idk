@@ -22,6 +22,7 @@ This repository serves as a personal knowledge base and contains research notes 
 * [Status Code](./backend-safari/status-code.md) (Tuesday 9:23PM, January 06, 2026)
 * [Execution Plans](./backend-safari/execution-plans.md) (Tuesday 8:35PM, August 18, 2026)
 * [Database Index](./backend-safari/database-index.md) (Wednesday 8:11PM, August 19, 2026)
+* [Caching Notes: Cache-Aside, TTL, Cache Invalidation](./backend-safari/caching-cache-aside-ttl-invalidation.md) (Thursday 10:53PM, September 17, 2026)
 
 ## Android
 
