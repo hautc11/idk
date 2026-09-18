@@ -25,11 +25,11 @@ This repository serves as a personal knowledge base and contains research notes 
 * [Data Normalization: 1NF, 2NF, 3NF, BCNF](./backend-safari/data-normalization.md) (Sunday 3:00PM, September 06, 2026)
 * [Caching Notes: Cache-Aside, TTL, Cache Invalidation](./backend-safari/caching-cache-aside-ttl-invalidation.md) (Thursday 10:53PM, September 17, 2026)
 * [API Response Format Standardization (Success & Error) + Correct HTTP Status Codes](./backend-safari/api-response-standardization.md) (Friday 7:34AM, September 18, 2026)
+* [Pagination (offset-based vs. cursor based)](./backend-safari/pagination-offset-vs-cursor.md) (Friday 7:34AM, September 18, 2026)
 
 ## Android
 
 * [Build Variants](./android/buid-variants.md) (Thursday 10:00PM, January 08, 2026)
-
 * [Inline Content in Text (Jetpack Compose Android)](./android/inline-content.md) (Thursday 10:00PM, January 08, 2026)
 
 
